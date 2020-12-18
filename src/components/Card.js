@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 import Loader from '../components/Loading'
+// import SearchBar from './SearchBar'
 
 const Card = ({ data, isLoading }) => {
     const [repos, setRepos] = useState([])
 
     useEffect(() => {
         const fetchRepoData = () => {
-
             fetch(data.repos_url)
                 .then(res => res.json())
                 .then(data => setRepos(data))
@@ -15,22 +15,21 @@ const Card = ({ data, isLoading }) => {
         fetchRepoData()
     }, [data])
 
-    const reposNames = repos.map(repo => {
+    const reposNames = repos.map((repo, index) => {
         return (
-            <a href={repo.html_url} target="_blank" className="repo">{repo.name}</a>
+            <a href={repo.html_url} target="_blank" rel="noreferrer" className="repo" key={index}>{repo.name}</a>
         )
     })
-    console.log(repos)
 
     if (isLoading) {
         return (
-            <div className="card-container">
+            <div className="container">
                 <Loader />
             </div>
         );
     } else {
         return (
-            < div className="card-container" >
+            < div className="container" >
                 <div className="card">
                     <div className="card-pic">
                         <img src={data.avatar_url} alt="Github Avatar" />
