@@ -17,7 +17,7 @@ const SearchBar = ({ getQuery }) => {
                     value={text}
                     onChange={e => setText(e.target.value)}
                 />
-                <input type="submit" className='submit' />
+                {/* <input type="submit" className='submit' /> */}
             </form>
         </div>
     )

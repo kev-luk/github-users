@@ -1,13 +1,13 @@
 import React from 'react'
-import { GridLoader } from 'react-spinners'
+import { BeatLoader } from 'react-spinners'
 
 const Loading = () => {
     return (
         <div className="loader">
-            <GridLoader
+            <BeatLoader
                 size={25}
                 margin={5}
-                color={'#005eff'}
+                color={'#cccccc'}
             />
         </div>
     )
