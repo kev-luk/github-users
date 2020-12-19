@@ -1,5 +1,7 @@
 # GitHub User Search
 
+View this project at https://user-search-github.herokuapp.com/
+
 Search for GitHub users with this application. A card is generated when an existing user is found, displaying information about that user.
 
 GitHub's users API was used to collect user information.
