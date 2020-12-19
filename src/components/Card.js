@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import Loader from '../components/Loading'
 
 const Card = ({ data }) => {
     const [repos, setRepos] = useState([])
